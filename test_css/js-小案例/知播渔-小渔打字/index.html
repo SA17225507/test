@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>打字游戏</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            background: url("images/bg.jpg") center center no-repeat;
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .specter {
+            width: 300px;
+            height: 300px;
+            background: url("images/yy.png") no-repeat;
+            position: absolute;
+            top: 1000px;
+        }
+
+        .specter > span {
+            position: absolute;
+            left: 70px;
+            top: 200px;
+            font-size: 60px;
+            font-weight: bold;
+            text-shadow: 5px 5px #494e84;
+        }
+
+        .score {
+            display: block;
+            width: 200px;
+            height: 50px;
+            margin: 50px auto;
+            background-color: #30448b;
+            font-size: 40px;
+            line-height: 50px;
+            text-align: center;
+            color: whitesmoke;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+<img src="images/play.png" alt="">
+<audio src="media/bg.ogg" loop></audio>
+<span class="score"></span>
+<script>
+    let oImg = document.querySelector("img");
+    let oAudio = document.querySelector('audio');
+    let list = [];//创建数组保存所有创建出来的幽灵对象
+    oImg.onclick = function () {
+        //移除play按钮
+        oImg.parentNode.removeChild(oImg);
+        oAudio.play();
+        let oScore = document.querySelector(".score");
+        oScore.style.opacity = "1";
+        oScore.innerText = "score: " + count;
+        //创建幽灵
+        setInterval(function () {
+            let s = new Specter();
+            s.fly();
+            list.push(s);//幽灵保存到list
+        }, 1000)
+    };
+
+
+    class Specter {
+        constructor() {
+            //创建div并设置样式
+            let oDiv = document.createElement("div");
+
+            oDiv.style.top = "1000px";
+            oDiv.style.left = Math.random() * 1300 + "px";
+            //创建span并设置内容
+            let oSpan = document.createElement("span");
+            let key = this.generateKey();
+            oSpan.innerText = key;
+            oDiv.className = "specter " + key;//添加多个类名时，注意类名与类名中间的空格
+            //将span添加到div中
+            oDiv.appendChild(oSpan);
+            //将div添加到body中
+            document.body.appendChild(oDiv);
+            this.oDiv = oDiv;//oDiv保存为幽灵对象的一个属性
+        }
+
+        //防止幽灵的创建和计时器累加，当幽灵溢出屏幕销毁
+        bomb() {
+            //删除当前幽灵
+            document.body.removeChild(this.oDiv);
+            //删除对应的定时器
+            clearInterval(this.timer);
+        }
+
+        //通过改变top值让幽灵移动
+        fly() {
+            //let self = this;
+            //获取幽灵当前top值
+            let offset = parseInt(this.oDiv.style.top);//this是调用该方法的幽灵
+            /* console.log(offset);
+             //开启定时器不断修改幽灵位置
+             this.timer = setInterval(function () {//定时器的this是window
+                 offset -= 60;
+                 if (offset <= -300) {
+                     self.bomb();
+                 }
+                 self.oDiv.style.top = offset + "px";//所以把幽灵的this保存在self
+             }, 200)*/
+            this.timer = setInterval(() => {//箭头函数不看谁调用他，看他的父作用域是谁，谁就是this
+                offset -= 30;
+                if (offset <= -300) {
+                    this.bomb();
+                }
+                this.oDiv.style.top = offset + "px";//
+            }, 200)
+        }
+
+        generateKey() {
+            let num = Math.floor(Math.random() * (90 - 65 + 1)) + 65;
+            return String.fromCharCode(num);
+        }
+    }
+
+    let count = 0;
+    document.body.onkeydown = function (event) {//监听除字母之外的键盘
+        let key = event.key.toUpperCase();
+        let oDiv = document.querySelector("." + key);//通过类名找到对应字母的div
+        // 删除该div时对应的定时器还没有删除，当定时器到期调用bomb()删除div时，div已经不存在
+        //document.body.removeChild(oDiv);
+
+        let currentIndex = list.findIndex(function (currentValue) {
+            //遍历数组，取出每一个幽灵对象判断是否和键盘类找到的div是同一个，是的话返回它的索引
+            return currentValue.oDiv === oDiv;
+        });
+        if (currentIndex == -1)//没找到该div
+            return;
+        //根据索引取出该对象，
+        let currentSpecter = list[currentIndex];
+        //将该对象删除
+        currentSpecter.bomb();
+        count++;
+        let oScore = document.querySelector(".score");
+        oScore.innerText = "score: " + count;
+        //从数组中删除
+        list.slice(currentIndex, 1);
+    }
+</script>
+</body>
+</html>

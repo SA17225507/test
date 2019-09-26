@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>九九乘法表</title>
+</head>
+<body>
+
+
+<script>
+    //接收用户输入的数，判断是不是偶数，是输出yes,否则输出no
+    //    let num = prompt("输入一个整数");
+    //    if(num%2 == 0){
+    //        alert("yes");
+    //    }
+    //    else{
+    //        alert("no");
+    //    }
+
+    for (var i = 1; i <= 9; i++) {
+        for(var j=1;j<=i;j++){
+            document.write(j+"*"+i+"="+(i*j));
+            document.write("    ");
+        }
+        document.write("<br>");
+    }
+
+</script>
+
+</body>
+</html>

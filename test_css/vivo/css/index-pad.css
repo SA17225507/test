@@ -1,0 +1,64 @@
+/*头部开始*/
+.nav1 {
+    display: none;
+}
+
+.nav2 {
+    display: block;
+}
+
+.header-bottom {
+    width: 100%;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+/*头部结束*/
+
+/*内容开始*/
+.content-top div > i {
+    width: 200px;
+    height: 30px;
+    background: url(../images/vivo-banner-title1-mini.png) no-repeat;
+}
+
+.content-top div > i:nth-child(2) {
+    background: url(../images/vivo-banner-title2-mini.png) no-repeat;
+}
+
+.content-top div > i:nth-child(3) {
+    background: url(../images/vivo-banner-title3-mini.png) no-repeat;
+}
+
+.content-top div > p {
+    width: 200px;
+    margin-top: 40px;
+}
+
+.content-bottom {
+    flex-wrap: wrap;
+    margin-top: 0;
+}
+
+.content-bottom > div {
+    flex: none;
+    width: 50%;
+    margin-top: 5px;
+}
+
+/*内容结束*/
+
+/*底部开始*/
+.footer-in {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.footer-bottom .bottom-left{
+    float: none;
+    width:auto;
+    margin-right: 25%;
+}
+
+/*底部结束*/

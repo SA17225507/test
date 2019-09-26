@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: #eee;
+}
+
+body {
+    min-width: 320px;
+    max-width: 750px;
+    margin: 0 auto;
+    background-color: #fff;
+    color: #fff;
+}
+
+/*头部开始*/
+.header > img {
+    width: 100%;
+    vertical-align: bottom; /*默认和基线对齐*/
+}
+
+/*头部结束*/
+
+/*主体开始*/
+.main .section {
+    display: flex;
+    height: 100px;
+    margin: 4px 2px;
+}
+
+.main .section > .col {
+    flex: 1;
+    border-left: 1px solid #fff;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #ED615C;
+}
+
+.main .section .hotel > p {
+    margin-top: 15px;
+}
+
+.main .section .hotel > img {
+    width: 42px;
+    height: 46px;
+    margin-top: 15px;
+}
+
+.main .section .col > div {
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #fff;
+}
+
+.main .section .col > div:last-child {
+    border-bottom: none;
+}
+
+.main .section:nth-child(2) > .col {
+    background-color: #43A6F0;
+}
+
+.main .section:nth-child(3) > .col {
+    background-color: #8AB549;
+}
+
+.main .section:nth-child(4) > .col {
+    background-color: #F29C38;
+}
+
+.main .section:nth-child(4) {
+    height: 50px;
+}
+
+/*主体结束*/
+/*导航开始*/
+.nav {
+    background-color: #ccc;
+    padding: 10px 0;
+}
+
+.nav > ul {
+    background-color: #fff;
+    display: flex;
+    list-style: none;
+}
+
+.nav > ul > li {
+    flex: 1;
+    height: 70px;
+    text-align: center;
+    color: #aaaaaa;
+    margin-top: 12px;
+    font-size: 12px;
+}
+
+.nav-top > li > i {
+    width: 33px;
+    height: 33px;
+    display: inline-block;
+    background: url(images/icons.png) no-repeat -35px -12px;
+}
+
+/*导航结束*/
+
+/*菜单栏开始*/
+.guide {
+    display: flex;
+    height: 80px;
+}
+
+.guide > div {
+    flex: 1;
+    text-align: center;
+}
+
+.guide > div > i {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    line-height: 40px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin-top: 10px;
+    color: black;
+    font-size: 35px;
+}
+.guide > div > p{
+    color: #666;
+    font-size:12px;
+}
+
+/*菜单栏结束*/
+
+/*底部开始*/
+.footer{
+    height: 50px;
+    background-color: #ccc;
+}
+
+.footer>p{
+    float: left;
+    color: #666;
+    line-height: 50px;
+    margin-right: 10px;
+}
+
+.footer a{
+    text-decoration: none;
+    color: #666;
+}
+
+/*底部结束*/

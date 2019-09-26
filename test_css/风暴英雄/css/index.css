@@ -1,0 +1,290 @@
+/*背景开始*/
+video {
+    width: 100%;
+    height: 1080px;
+    object-fit: cover;
+}
+
+/*背景结束*/
+
+/*头部开始*/
+.header {
+    width: 1196px;
+    height: 235px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+
+.header ul {
+    padding-top: 45px;
+}
+
+.header ul > li {
+    width: 200px;
+    height: 60px;
+    float: left;
+    background: linear-gradient(#46018c, #0200a1);
+    line-height: 60px;
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 204, .4), 0 0 40px rgba(102, 0, 204, .2);
+    position: relative;
+}
+
+.header ul > li:first-child > span { /*渐变分割线*/
+    position: absolute;
+    display: block;
+    width: 1px;
+    height: 50px;
+    right: 0;
+    top: 2px;
+    background: #494794 linear-gradient(#24204d, #494794, #1b1638);
+}
+
+.header ul > li:nth-child(2) {
+    margin-right: 393px;
+}
+
+.header ul > li:last-child {
+    border-right: none;
+    background: url("../image/download2.0.png");
+}
+
+.header ul > li > a {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 18px;
+    color: #FFFFFF;
+    background: url("../image/nav-itembg.png");
+    border-bottom: 2px solid transparent;
+    box-sizing: border-box;
+    transition: border-color .5s;
+}
+
+.header ul > li > a:hover {
+    border-color: #FFFFFF;
+}
+
+.header ul > li:last-child a {
+    background: none;
+}
+
+.header h1 {
+    position: absolute;
+    left: 400px;
+}
+
+.header h1 img {
+    width: 393px;
+}
+
+/*头部结束*/
+/*中间开始*/
+.main {
+    width: 100%;
+    height: 1080px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.main .slogan {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 235px;
+}
+
+.main ul {
+    width: 1000px;
+    height: 205px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 888;
+}
+
+.main ul > li {
+    width: 310px;
+    height: 205px;
+    position: relative; /*保留原来位置与其他li对齐*/
+}
+
+.main ul > li:first-child {
+    animation: move 1s linear 1s;
+    animation-fill-mode: forwards;
+}
+
+.main ul > li:nth-child(2) {
+    animation: move 1s linear 2s;
+    animation-fill-mode: forwards;
+}
+
+.main ul > li:nth-child(3) {
+    animation: move 1s linear 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move {
+    from {
+        bottom: 0;
+    }
+    to {
+        bottom: 120px;
+    }
+}
+
+.main ul > li > h3 {
+    width: 310px;
+    height: 50px;
+    font-size: 20px;
+    color: #FFFFFF;
+    background-color: #15112d;
+    text-align: center;
+    line-height: 50px;
+    border: 2px solid #2a2658;
+    box-sizing: border-box;
+}
+
+.main ul > li > a {
+    display: inline-block;
+    width: 100%;
+    border: 2px solid #655fc7;
+    box-sizing: border-box;
+}
+
+.main ul > li > a > img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+/*中间结束*/
+
+/*底部开始*/
+.footer {
+    width: 100%;
+    height: 502px;
+    background-color: #0B0116;
+    position: absolute;
+    left: 0;
+    top: 1080px;
+    border-top: 2px solid #655fc7;
+}
+
+.footer-in {
+    height: 422px;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-in .footer-top {
+    padding-top: 125px;
+    padding-bottom: 45px;
+}
+
+.footer-in > .footer-top a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.footer-in > .footer-top a > i {
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    background: url("../image/footer-top.png") no-repeat -6px -7px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.footer-in > .footer-top a:nth-child(2) i {
+    background-position: -36px -8px;
+}
+
+.footer-in > .footer-top a:nth-child(3) i {
+    background-position: -6px -100px;
+}
+
+.footer-in .footer-top i {
+    display: inline-block;
+    width: 95px;
+    height: 26px;
+    background: url("../image/footer-top.png") no-repeat -142px -44px;
+    vertical-align: top;
+}
+
+.footer-top span {
+    color: #fff;
+    font-size: 14px;
+    margin: 0 10px;
+}
+
+.footer-top b {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    border: 1px solid #462385;
+    background-color: #2b0473;
+    font-size: 12px;
+    color: #FFFFFF;
+    line-height: 14px;
+    text-align: center;
+}
+
+.footer-in > .footer-top div {
+    height: 30px;
+    line-height: 30px;
+}
+
+.footer-in .footer-middle .middle-left {
+    margin-right: 75px;
+}
+
+.footer-in .footer-middle .middle-right p {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.footer-in .footer-middle .middle-right a {
+    text-decoration: none;
+    color: #ccc;
+}
+
+.footer-in .footer-middle .middle-right span {
+    color: #ccc;
+    margin: 0 10px;
+}
+
+.footer-in > .footer-middle > .middle-right > div p {
+    font-size: 12px;
+    color: #8eb1bc;
+}
+
+.footer-in > .footer-middle > .middle-right > div a {
+    color: #8eb1bc;
+}
+
+.footer-in > .footer-middle > .middle-right a:hover {
+    color: #fff;
+}
+
+.footer-in > .footer-bottom{
+    padding-top: 35px;
+}
+.footer-in > .footer-bottom p{
+    font-size: 12px;
+    line-height: 10px;
+    color: #417aa1;
+    text-align: center;
+    margin: 12px 0;
+}
+/*底部结束*/

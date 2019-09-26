@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+.header {
+    width: 980px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.header .box1 {
+    float: left;
+    width: 250px;
+    height: 100px;
+    background-color: #ebc2cf;
+}
+
+.header .box2 {
+    float: right;
+    width: 150px;
+    height: 50px;
+    background-color: #abd7eb;
+}
+
+.header .box3 {
+    float: right;
+    width: 650px;
+    height: 50px;
+    background-color: #732580;
+}
+
+.content {
+    width: 980px;
+    height: 400px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.content .left {
+    float: left;
+    width: 320px;
+    height: 400px;
+    background-color: #fcfb52;
+}
+
+.content .right {
+    float: right;
+    width: 650px;
+    height: 400px;
+}
+
+.content .right .top{
+    width: 650px;
+    height: 350px;
+}
+
+.content .right .top .topAside {
+    float: left;
+    width: 400px;
+    height: 350px;
+}
+
+.content .right .top .topAside .aside1 {
+    width: 400px;
+    height: 200px;
+    background-color: #d64199;
+}
+
+.content .right .top .topAside .aside2 {
+    width: 400px;
+    height: 140px;
+    background-color: #68cef6;
+    margin-top:10px;
+}
+
+.content .right .top .topArticle {
+    float: right;
+    width: 240px;
+    height: 350px;
+    background-color: #b6d959;
+}
+
+.content .right .bottom {
+    width: 650px;
+    height: 40px;
+    background-color: #b49330;
+    margin-top: 10px;
+}
+
+.footer {
+    width: 980px;
+    height: 40px;
+    background-color: #de695a;
+    margin: 0 auto;
+    margin-top: 10px;
+}

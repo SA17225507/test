@@ -1,0 +1,313 @@
+/*头部开始*/
+.header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999; /*防止被后定位的覆盖*/
+}
+
+.header .header-top {
+    width: 100%;
+    height: 40px;
+    padding: 0 48px;
+    box-sizing: border-box;
+    background-color: #333333;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .header-top ul {
+    list-style: none;
+    color: #cccccc;
+}
+
+.header .header-top ul > li {
+    float: left;
+    margin-right: 42px;
+    line-height: 40px;
+}
+
+.header .header-top ul > li:last-child {
+    margin-right: 0;
+}
+
+.header .header-top ul > li > a {
+    font-size: 14px;
+    color: #cccccc;
+    font-weight: 400;
+}
+
+.header .header-top ul > li:hover > a {
+    color: #666;
+}
+
+.header-bottom {
+    width: 1200px;
+    height: 60px;
+    line-height: 60px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-bottom .logo > a {
+    font-size: 100px;
+    color: #FFFFFF;
+}
+
+.header-bottom > .logo:hover a {
+    color: #417fff;
+}
+
+.header-bottom ul > li {
+    float: left;
+    margin: 0 28px;
+}
+
+.header-bottom ul > li > a {
+    font-size: 16px;
+    color: #000;
+}
+
+.header-bottom > ul > li:hover a {
+    color: #415fff;
+}
+
+.header-bottom .search > a {
+    font-size: 30px;
+    color: #cccccc;
+}
+
+/*头部结束*/
+
+/*内容开始*/
+.content {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.content .content-top {
+    width: 100%;
+    position: relative;
+}
+
+.content .content-top img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.content .content-top ol {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 40px;
+}
+
+.content .content-top ol > li {
+    float: left;
+    width: 40px;
+    height: 2px;
+    margin: 0 4px;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+.content .content-top ol > li:hover {
+    height: 5px; /*变化时其他不动的方法*/
+    background: rgba(255, 255, 255, 1);
+}
+
+.content-top div {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /*上下居中*/
+    left: 20%;
+}
+
+.content-top div > i {
+    display: block;
+    width: 304px;
+    height: 45px;
+    background: url("../images/vivo-banner-title1.png") no-repeat;
+}
+
+.content-top div > i:nth-child(2) {
+    background: url("../images/vivo-banner-title2.png") no-repeat;
+}
+
+.content-top div > i:nth-child(3) {
+    background: url("../images/vivo-banner-title3.png") no-repeat;
+}
+
+.content-top div > p {
+    width: 304px;
+    text-align: center;
+    margin-top: 60px;
+    font-size: 14px;
+    color: #cccccc;
+    transition: all .5s;
+}
+
+.content-top div > p:hover {
+    color: #fff;
+}
+
+.content-top div > p:hover b {
+    width: 60px;
+    background: #fff;
+}
+
+.content-top div > span {
+    display: block;
+}
+
+.content-top div b {
+    width: 16px;
+    height: 2px;
+    display: block;
+    margin: 8px auto;
+    background: #cccccc;
+    transition: all 0.5s;
+}
+
+.content-bottom {
+    display: flex;
+    margin-top: 5px;
+    width: 100%;
+    position: relative;
+}
+
+.content-bottom > div {
+    flex: 1;
+    overflow: hidden;
+    height: 300px;
+    position: relative;
+}
+
+.content-bottom > div img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.content-bottom .bottom-title {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    color: #333;
+    z-index: 888;
+    text-align: center;
+}
+
+.content-bottom div:nth-child(even) .bottom-title {
+    color: #FFFFFF;
+}
+
+.content-bottom .bottom-title h3 {
+    height: 21px;
+    line-height: 21px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.content-bottom .bottom-title p {
+    font-size: 14px;
+}
+
+/*内容结束*/
+
+/*底部开始*/
+.footer {
+    width: 100%;
+    background: #f7f7f7;
+    padding-top: 60px;
+}
+
+.footer-in {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.footer .footer-top {
+    padding-bottom: 76px;
+    border-bottom: 2px solid #cccccc;
+}
+
+.footer-top .top-left {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-top .top-left dl > dt {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 17px;
+    margin-bottom: 40px;
+}
+
+.footer-top .top-left dl > dd {
+    color: #666;
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 18px;
+}
+
+.footer-top .top-right {
+    width: 25%;
+    text-align: center;
+}
+
+.footer-top .top-right p:first-child a {
+    font-size: 22px;
+    color: #333;
+}
+
+.footer-top .top-right p:nth-child(2) {
+    color: #415fff;
+    font-size: 24px;
+    margin-top: 60px;
+}
+
+.footer-top .top-right p:nth-child(3) {
+    font-size: 14px;
+    color: #666;
+}
+
+.footer-bottom {
+    font-size: 12px;
+    color: #666666;
+    padding: 10px 0;
+}
+
+.footer-bottom a {
+    color: #666666;
+}
+
+.footer-bottom .bottom-right a {
+    font-size: 12px;
+}
+
+.footer-bottom .bottom-right a:last-child {
+    margin-left: 60px;
+}
+
+/*底部结束*/
+
+/*响应式兼容开始*/
+.nav2 {
+    display: none;
+}
+
+.header .header-phone {
+    display: none;
+}
+
+.content-top ul li:nth-child(2) {
+    display: none;
+}
+
+/*响应式兼容结束*/

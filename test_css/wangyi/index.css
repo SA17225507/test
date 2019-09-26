@@ -1,0 +1,254 @@
+body, h1, h2, h3, h4, h5, h6, ul, ol, li, form, p, dl, dt, dd, table, th, td, img, blockquote ，div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 12px;
+    color: #555;
+}
+
+a {
+    color: #039;
+    text-decoration: none;
+}
+
+/*region 头部*/
+header {
+    width: 960px;
+    height: 81px;
+    margin: 0 auto;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+
+header .bg {
+    width: 644px;
+    height: 27px;
+    float: left;
+    background: url("./img/glb_v2.png");
+}
+
+header .bg a {
+    width: 128px;
+    height: 27px;
+    display: inline-block;
+}
+
+header .links {
+    float: right;
+    width: 200px;
+    height: 19px;
+    text-align: right;
+}
+
+header .links a {
+    line-height: 27px;
+}
+
+/*endregion*/
+
+section {
+    width: 960px;
+    height: 660px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+section .header {
+    width: 958px;
+    height: 36px;
+    border: 1px solid #5B88B8;
+    border-radius: 3px 3px 0px 0px;
+    background: url("./img/bgx.png") repeat-x;
+    background-color: #ddd;
+}
+
+section .header h1 {
+    color: #ffffff;
+    line-height: 36px;
+    font-size: 14px;
+    font-weight: normal;
+    text-indent: 20px;
+}
+
+section .main .inform {
+    float: left;
+    width: 644px;
+    height: 620px;
+    padding: 50px 0px 36px 60px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+section .main .inform .tabs {
+    width: 582px;
+    height: 58px;
+    padding-left: 118px;
+    box-sizing: border-box;
+}
+
+section .main .inform .tabs ul {
+    width: 335px;
+    height: 34px;
+    list-style: none;
+    background: url("img/glb_v2.png");
+    background-position: 340px 68px;
+}
+
+section .main .inform .tabs ul li {
+    float: left;
+    width: 166px;
+    height: 35px;
+}
+
+section .main .inform .tabs ul li a {
+    width: 100%;
+    line-height: 35px; /*垂直居中*/
+    text-align: center; /*水平居中*/
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+section .main .inform .informBody {
+    width: 573px;
+    height: 475px;
+}
+
+section .main .inform .informBody .tips {
+    width: 403px;
+    height: 26px;
+    line-height: 16px;
+    padding: 6px 0 4px;
+}
+
+section .main .inform .informBody dl {
+    display: inline-block;
+    position: relative;
+}
+
+section .main .inform .informBody dl dt {
+    float: left;
+    width: 90px;
+    height: 19px;
+    text-align: right;
+    font-size: 14px;
+    position: absolute;
+    top: 13px;
+    font-size: 14px;
+}
+
+section .main .inform .informBody dl dt span {
+    color: red;
+    margin-right: 4px;
+
+}
+
+section .main .inform .informBody dl dd {
+    float: left;
+    width: 573px;
+    height: 69px;
+    padding: 8px 0px 8px 85px;
+    box-sizing: border-box;
+    margin-left: 35px;
+}
+
+section .main .inform .informBody dl dd input {
+    padding: 4px 5px;
+    border: 1px solid #ABABAB;
+    box-shadow: 2px 2px 3px #EDEDED inset;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+select {
+    width: 92px;
+    height: 20px;
+    padding: 3px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+section .main .inform .informBody .email {
+    width: 513px;
+    height: 69px;
+}
+
+section .main .inform .informBody .email input {
+    width: 200px;
+}
+
+section .main .inform .informBody .password input {
+    width: 322px;
+}
+
+section .main .inform .informBody .confirm input {
+    width: 200px;
+}
+
+section .main .inform .informBody .confirm img {
+    width: 120px;
+    height: 50px;
+    border: #E7E7E7 1px solid;
+    position: absolute;
+    top: -10px;
+    left: 335px;
+    cursor: pointer;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+section .main .inform .informBody .confirm .switchCode {
+    position: absolute;
+    top: 50px;
+    left: 335px;
+}
+
+section .main .inform .informBody .tel{
+    height:85px;
+}
+section .main .inform .informBody .agree dd{
+    height: 36px;
+}
+section .main .inform .informBody .submit {
+    display: block;
+    width: 200px;
+    height: 37px;
+    font-size: 14px;
+    line-height: 37px;
+    color: #FFF;
+    outline: none;
+    text-align: center;
+    font-weight: bold;
+    background-color: #51ad3b;
+}
+
+section .main .aside {
+    float: right;
+    width: 316px;
+    height: 620px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-top: none;
+    border-left: none;
+    background-color: #f6f4f6;
+}
+
+section .main .aside .asideImg {
+    width: 315px;
+    height: 432px;
+    padding: 106px 0px 0px 45px;
+    box-sizing: border-box;
+}
+
+footer {
+    height: 80px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 40px;
+    color: #888;
+}
+footer a{
+    color: #888;
+}

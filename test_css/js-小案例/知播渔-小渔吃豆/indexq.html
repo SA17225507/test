@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>知播渔-小渔吃豆</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/SnakeMap.js"></script>
+    <script src="js/SnakeFood.js"></script>
+    <script src="js/Snake.js"></script>
+</head>
+<body>
+<!--<div class="map"></div>-->
+<script>
+    let snakeMap = new SnakeMap();
+    let snakeFood = new SnakeFood(100, 100, "images/body.png", snakeMap);
+    snakeFood.render();
+    let obj = {
+        width: 100,
+        height: 100,
+        headImg: "images/head.png",
+        bodyImg: "images/body.png",
+        snakeMap: snakeMap
+    }
+    // let snake = new Snake(100, 100, "images/head.png", "images/body.png");
+    let snake = new Snake(obj);
+    snake.render();
+    snake.update(snakeFood);
+    // let snake = new Snake();
+    // snake.render(snakeMap);
+    // snake.move(snakeMap);
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    function cutRope(number)
+    {
+        //f(n)=max(f(i)*f(n-i))
+        if(number < 2) return 0;
+        if(number === 2) return 1;
+        if(number === 3) return 2;
+        let products = [0,1,2,3];
+
+        for(let i = 4;i <= number;i++){
+            let max = 0;
+            for(let j = 1;j <= i/2;j++){
+                let product = products[j] * products[i - j];//f(i)*f(n-i)，1<i<=n/2
+                if(max < product) max = product;
+                product[i] = max;//记录每一个f(i)的最优解
+            }
+
+        }
+        return products[number];
+    }
+
+    console.log(cutRope(4));
+
+</script>
+</body>
+</html>

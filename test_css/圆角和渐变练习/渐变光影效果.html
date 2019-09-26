@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>渐变光影</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: #000000;
+        }
+
+        div {
+            width: 350px;
+            height: 100px;
+            border: 1px solid #fff;
+            font-size: 70px;
+            margin: 100px auto;
+            color: rgba(255,255,255,0.3);
+            background: linear-gradient(45deg,transparent 40px, white 70px, white 80px, transparent 110px);
+            -webkit-background-clip: text;
+            transition: all 1s;
+        }
+        div:hover{
+            background-position: 350px 0px;
+        }
+        
+        .border{
+            width: 300px;
+            height: 300px;
+            border: 1px solid;
+            border-image: linear-gradient(#24204d, #494794, #1b1638) 30 30;
+        }
+    </style>
+</head>
+<body>
+<div>哈哈哈哈哈</div>
+<div class="border"></div>
+</body>
+</html>
